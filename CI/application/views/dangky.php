@@ -7,7 +7,7 @@
 </head>
 <body>
 <div>
-	<p >slot con lai:</p><span id="slot"></span>
+	<p >slot con lai: <span id="slot"></span></p>
 	<input type='text' id='name' value='Anynomous'/>
 	<button id='dk'>Dang ky</button>
 	<button id='huy'>Huy</button>
@@ -22,10 +22,10 @@
 		socket.emit('data','data truyen len');
 		socket.on('data',function (data) {
 			$('#slot').empty();
-			if(data.slot == 0 || data.slot < 0){
+			if(data == 0 || data < 0){
 				$('#slot').append('het slot roi');
 			}else {
-				$('#slot').append(data.slot);
+				$('#slot').append(data);
 			}
 		});
 
