@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Hello extends CI_Controller  {
+class Room extends CI_Controller {
 
     /**
      * Index Page for this controller.
@@ -18,12 +18,15 @@ class Hello extends CI_Controller  {
      * map to /index.php/welcome/<method_name>
      * @see https://codeigniter.com/user_guide/general/urls.html
      */
+    public function __construct()
+    {
+        parent::__construct();
+
+        //other construct code below, if needed upon instantiation
+    }
     public function index()
     {
-        $this->load->view('roomDetail');
-    }
-    public function room()
-    {
-        $this->load->view('roomDetail');
+        $this->load->view('dangky');
+//        echo '123';
     }
 }
